@@ -11,7 +11,7 @@ def normalize_img(image, label):
 
 
 
-(ds_train, ds_test), ds_info = tfds.load(
+(ds_train, ds_test) = tfds.load(
     'mnist',
     split=['train', 'test'],
     shuffle_files=True,
