@@ -15,8 +15,7 @@ def normalize_img(image, label):
     'mnist',
     split=['train', 'test'],
     shuffle_files=True,
-    as_supervised=True,
-    with_info=True,
+    as_supervised=True
 )
 
 ds_train = ds_train.map(
