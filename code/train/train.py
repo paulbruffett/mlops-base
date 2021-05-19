@@ -11,11 +11,12 @@ def normalize_img(image, label):
 
 
 
-(ds_train, ds_test) = tfds.load(
+(ds_train, ds_test), ds_info = tfds.load(
     'mnist',
     split=['train', 'test'],
     shuffle_files=True,
-    as_supervised=True
+    as_supervised=True,
+    with_info=True,
 )
 
 ds_train = ds_train.map(
