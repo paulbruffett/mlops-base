@@ -37,7 +37,3 @@ os.makedirs('./outputs/model', exist_ok=True)
 model_json = model.save("./outputs/model/")
 
 print("model saved in ./outputs/model folder")
-
-print(x_test[0][0])
-
-print(y_test[0])
