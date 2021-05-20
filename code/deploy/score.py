@@ -38,4 +38,4 @@ def run(data):
 
     # You can return any JSON-serializable object.
     #return { "predict": result.tolist() }
-    return { "predict": os.listdir("AZUREML_MODEL_DIR")}
+    return { "predict": os.listdir(os.environ.get("AZUREML_MODEL_DIR"))}
