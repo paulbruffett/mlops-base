@@ -38,7 +38,7 @@ jobs:
       with:
           azure_credentials: ${{ secrets.AZURE_CREDENTIALS }}
 
-# Register model in Azure Machine Learning model registry
+    # Register model in Azure Machine Learning model registry
     - name: Register model
       id: aml_registermodel
       uses: Azure/aml-registermodel@v1
