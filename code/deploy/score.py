@@ -36,4 +36,4 @@ def run(data):
     prediction_dc.collect(result) #this call is saving our input data into Azure Blob
 
     # You can return any JSON-serializable object.
-    return { "predict": result.tolist() }
+    return { "predict": np.argmax(result.tolist())+1 }
