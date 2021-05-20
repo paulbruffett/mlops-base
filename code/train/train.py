@@ -1,6 +1,7 @@
 import tensorflow as tf
 mnist = tf.keras.datasets.mnist
 from tensorflow.keras.callbacks import Callback
+import os
 
 from azureml.core import Run
 run = Run.get_context()
@@ -32,8 +33,8 @@ model.fit(x_train, y_train, epochs=5)
 loss, acc = model.evaluate(x_test,y_test)
 run.log("Validation Accuracy", acc)
 
-os.makedirs('./outputs/model', exist_ok=True)
+os.makedirs('./outputs/model/', exist_ok=True)
 
-model_json = model.save("./outputs/model/")
+model.save("./outputs/model/")
 
 print("model saved in ./outputs/model folder")
