@@ -31,3 +31,13 @@ model.fit(x_train, y_train, epochs=5)
 
 loss, acc = model.evaluate(x_test,y_test)
 run.log("Validation Accuracy", acc)
+
+os.makedirs('./outputs/model', exist_ok=True)
+
+model_json = model.save("./outputs/model/")
+
+print("model saved in ./outputs/model folder")
+
+print(x_test[0][0])
+
+print(y_test[0])
